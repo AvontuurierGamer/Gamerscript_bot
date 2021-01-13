@@ -35,23 +35,11 @@ fs.readdir("./commands/", (err, files) => {
 
         client.user.setActivity("!help", {
             type: "WATCHING"
-        });
-
-    });
-    
-    client.on('guildMemberAdd', async newMember => {
-   
-        const welcomeChannel = newMember.guild.channels.cache.find(channel => channel.id === '793769602739470340')
-        welcomeChannel.send('test')
-
-        let msgEmbed = new Discord.MessageEmbed()
-            .setTitle (`test`)
-  
-    if (newMember.bot) return; 
-
-    message.channel.send(msgEmbed)
 });
 
+    var swearWords = ["kut", "fack", "kak"];
+
+});
 });
 
 
@@ -62,6 +50,20 @@ client.on("message", async message => {
 
     if (message.channel.type === "dm") {
         return;
+    }
+
+    var msg = message.content.toLowerCase();
+
+    for (let i = 0; i < swearWords.length; i++) {
+
+        if(msg.includes(swearWords[i])){
+
+            message.delete();
+
+            return message.reply("niet schelden aub").then (msg => msg.delete({ timeout: 3000 }));
+
+        }
+        
     }
 
     var prefix = botConfig.prefix;
@@ -83,43 +85,3 @@ client.on("message", async message => {
 });
 
 client.login(process.env.token); 
-
-function RandomXp(message) {
-
-    var randomNumber = Math.floor(Math.random() * 15) + 1;
-
-    var idUser = message.author.id;
-
-    if(!levelFile[idUser]) {
-        levelFile[idUser] = {
-            xp: 0,
-            level: 0
-        }
-    }
-
-    levelFile[idUser].xp += randomNumber;
-
-    var levelUser = levelFile[idUser].level;
-    var xpUser = levelFile[idUser].xp;
-
-    var nextLevelXp = levelUser * 300;
-
-    if(nextLevelXp == 0) nextLevelXp = 100;
-
-    if(xpUser >= nextLevelXp) {
-
-        levelFile[idUser].level += 1;
-
-        var embedLevel = new discord.MessageEmbed()
-            .setDescription("**Level up**")
-            .setColor("#00ff00")
-            .addField("Nieuw level: ", levelFile[idUser].level);
-        message.channel.send(embedLevel);
-
-    }
-
-}
-
-fs.writeFile("./data/levels.json", JSON.stringify(levelFile), err => {
-    if (err) console.log(err);
-});
