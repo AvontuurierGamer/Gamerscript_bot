@@ -55,8 +55,6 @@ client.on("message", async message => {
 
     var command = messageArray[0];
 
-    RandomXp(message);
-
     if (!message.content.startsWith(prefix)) return;
 
     var args = messageArray.slice(1);
