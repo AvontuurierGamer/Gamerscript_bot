@@ -36,9 +36,6 @@ fs.readdir("./commands/", (err, files) => {
         client.user.setActivity("!help", {
             type: "WATCHING"
 });
-
-    var swearWords = ["kut", "fack", "kak"];
-
 });
 });
 
@@ -50,20 +47,6 @@ client.on("message", async message => {
 
     if (message.channel.type === "dm") {
         return;
-    }
-
-    var msg = message.content.toLowerCase();
-
-    for (let i = 0; i < swearWords.length; i++) {
-
-        if(msg.includes(swearWords[i])){
-
-            message.delete();
-
-            return message.reply("niet schelden aub").then (msg => msg.delete({ timeout: 3000 }));
-
-        }
-        
     }
 
     var prefix = botConfig.prefix;
