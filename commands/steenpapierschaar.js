@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
 
-    if(!args[0]) return message.reply("Gebruik sps <steen, papier, schaar>");
+    if(!args[0]) return message.reply("doe !sps <steen, papier of schaar>");
 
     var options = ["steen", "papier", "schaar"];
 
