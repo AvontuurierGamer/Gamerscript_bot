@@ -27,10 +27,6 @@ module.exports.run = async(bot, message, args) => {
 
             msg.delete();
 
-            const welkom = message.guild.channel.cache.getName('👋•welkom');
-
-            message.channel(welkom).send("Welkom"); 
-
             message.member.roles.add(Role1);
 
         } else if(emoji == "❌") {
