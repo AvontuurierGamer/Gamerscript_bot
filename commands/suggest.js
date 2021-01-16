@@ -21,6 +21,7 @@ module.exports.run = async(bot, message, args) => {
 
     channel.send(suggestEmbed).then(embedMessage => {
         embedMessage.react('👍');
+        embedMessage.react('🤷‍♂️');
         embedMessage.react('👎');
     });
     
