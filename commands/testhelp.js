@@ -10,6 +10,12 @@ module.exports.run = async(bot, message, args) => {
         .setFooter("test")
         .setTimestamp()
 
+        var embedtest = new discord.MessageEmbed()
+        .setColor("GREEN")
+        .setTitle("test is het gelukt?")
+        .setFooter("test")
+        .setTimestamp()
+
     message.channel.send(embedPrompt).then(async msg => {
 
         message.delete();
@@ -18,7 +24,7 @@ module.exports.run = async(bot, message, args) => {
 
         if(emoji == "⏩") {
 
-            message.edit("test")
+            message.channel.edit(embedtest)
 
         } else if(emoji == "❌") {
 
