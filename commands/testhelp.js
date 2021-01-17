@@ -18,8 +18,6 @@ module.exports.run = async(bot, message, args) => {
 
         if(emoji == "⏩") {
 
-            msg.delete();
-
             message.edit("test")
 
         } else if(emoji == "❌") {
