@@ -10,7 +10,7 @@ module.exports.run = async(bot, message, args) => {
         .setFooter("test")
         .setTimestamp()
 
-        var embedtest = new discord.MessageEmbed()
+    var embedtest = new discord.MessageEmbed()
         .setColor("GREEN")
         .setTitle("test is het gelukt?")
         .setFooter("test")
