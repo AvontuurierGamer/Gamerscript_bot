@@ -25,7 +25,6 @@ module.exports.run = async(bot, message, args) => {
             msg.edit(embedtest).then((msg) =>  {
                 setTimeout(function(){
                 msg.edit(embedtest);
-                collected.first().send()
                 }, 1)
             })
 
