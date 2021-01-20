@@ -22,9 +22,9 @@ module.exports.run = async(bot, message, args) => {
 
         if(emoji == "⏩") {
 
-            message.edit(embedPrompt).then((msg) =>  {
+            msg.edit(embedPrompt).then((msg) =>  {
                 setTimeout(function(){
-                message.edit(embedtest);
+                msg.edit(embedtest);
                 collected.first().send()
                 }, 1)
             })
