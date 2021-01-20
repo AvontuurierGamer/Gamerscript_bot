@@ -24,12 +24,7 @@ module.exports.run = async(bot, message, args) => {
 
         if(emoji == "⏩") {
 
-            message.edit(embedPrompt).then((msg) =>  {
-                setTimeout(function(){
-                msg.edit(embedtest);
-                collected.first().delete()
-                }, 1)
-            })
+            message.edit(embedtest)
 
         } else if(emoji == "❌") {
 
