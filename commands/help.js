@@ -10,7 +10,7 @@ module.exports.run = async(bot, message, args) => {
         .addField("ticket = 🎫")
         .addField("fun = 😁")
         .addField("anuleren = ❌")
-        .setFooter("help")
+        .setFooter(`${message.author.username}`)
         .setTimestamp()
 
     var embedhelpoverig = new discord.MessageEmbed()
@@ -21,7 +21,7 @@ module.exports.run = async(bot, message, args) => {
             {name: "!suggest", value: "`schrijf een suggestie`"},
             {name: "!review", value: "`schrijf een review`"},
         )
-        .setFooter("Help")
+        .setFooter(`${message.author.username}`)
         .setTimestamp()
 
     var embedhelpfun =  new discord.MessageEmbed()
@@ -30,7 +30,7 @@ module.exports.run = async(bot, message, args) => {
         .addFields(
             {name:"sps", value: "`Speel steen papier schaar tegen de bot`"}
         )
-        .setFooter("help")
+        .setFooter(`${message.author.username}`)
         .setTimestamp()
 
         var embedhelpmod =  new discord.MessageEmbed()
@@ -42,7 +42,7 @@ module.exports.run = async(bot, message, args) => {
                 {name: "ban", value: "`hiermee kan een staff lid iemand bannen`"},
                 {name: "clear", value: "`verwijder een aantal berichten`"}
             )
-            .setFooter("Help")
+            .setFooter(`${message.author.username}`)
             .setTimestamp()
 
         var embedhelpticket =  new discord.MessageEmbed()
@@ -54,7 +54,7 @@ module.exports.run = async(bot, message, args) => {
                 {name: "add", value: "`voeg iemand toe aan een ticket`"},
                 {name: "remove", value: "`verwijder iemand uit een ticket`"}
             )
-            .setFooter("help")
+            .setFooter(`${message.author.username}`)
             .setTimestamp()
 
     message.channel.send(embedPrompt).then(async msg => {
