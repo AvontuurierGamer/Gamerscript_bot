@@ -60,9 +60,7 @@ module.exports.run = async(bot, message, args) => {
             var embedgeanuleerd =  new discord.MessageEmbed()
             .setTitle("geanuleerd")
             .setColor("#03fc0f")
-            .addFields(
-                {name:"geanuleerd", value: ""}
-            )
+            .addField("geanuleerd")
             .setFooter("geanuleerd")
             .setTimestamp()
 
