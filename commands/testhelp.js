@@ -2,8 +2,6 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
 
-    const Role1 = message.guild.roles.cache.get("797135226672775200");
-
     var embedPrompt = new discord.MessageEmbed()
         .setColor("GREEN")
         .setTitle("reageer met ⏩ om door te gaan!")
@@ -24,7 +22,14 @@ module.exports.run = async(bot, message, args) => {
 
         if(emoji == "⏩") {
 
-            message.edit(embedtest)
+            message.edit(embedtest).then((msg) =>  {
+                setTimeout(function(){
+                msg.edit(embedtest);
+                collected.first().delete()
+                }, 1)
+            })
+
+        message.channel.send();
 
         } else if(emoji == "❌") {
 
