@@ -67,7 +67,7 @@ module.exports.run = async(bot, message, args) => {
 
             msg.edit(embedhelpoverig).then((msg) =>  {
                 setTimeout(function(){
-                msg.edit(embedtest);
+                msg.edit(embedhelpoverig);
                 }, 1)
             })
 
@@ -75,7 +75,7 @@ module.exports.run = async(bot, message, args) => {
 
             msg.edit(embedhelpmod).then((msg) =>  {
                 setTimeout(function(){
-                msg.edit(embedtest);
+                msg.edit(embedhelpmod);
                 }, 1)
             })
 
@@ -83,7 +83,7 @@ module.exports.run = async(bot, message, args) => {
 
             msg.edit(embedhelpticket).then((msg) =>  {
                 setTimeout(function(){
-                msg.edit(embedtest);
+                msg.edit(embedhelpticket);
                 }, 1)
             })
 
@@ -91,7 +91,7 @@ module.exports.run = async(bot, message, args) => {
 
             msg.edit(embedhelpfun).then((msg) =>  {
                 setTimeout(function(){
-                msg.edit(embedtest);
+                msg.edit(embedhelpfun);
                 }, 1)
             })
 
