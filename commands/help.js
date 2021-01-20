@@ -57,13 +57,6 @@ module.exports.run = async(bot, message, args) => {
             .setFooter("help")
             .setTimestamp()
 
-            var embedgeanuleerd =  new discord.MessageEmbed()
-            .setTitle("geanuleerd")
-            .setColor("#03fc0f")
-            .addField("geanuleerd")
-            .setFooter("geanuleerd")
-            .setTimestamp()
-
     message.channel.send(embedPrompt).then(async msg => {
 
         message.delete();
@@ -114,11 +107,7 @@ module.exports.run = async(bot, message, args) => {
 
             msg.reactions.removeAll()
 
-            msg.edit(embedgeanuleerd).then((msg) =>  {
-                setTimeout(function(){
-                msg.edit(embedgeanuleerd);
-                }, 1)
-            })
+            msg.delete();
 
         }
 
