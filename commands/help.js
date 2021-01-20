@@ -65,7 +65,7 @@ module.exports.run = async(bot, message, args) => {
 
         if(emoji == "😉") {
 
-            message.remove_reaction
+            remove.reactions
 
             msg.edit(embedhelpoverig).then((msg) =>  {
                 setTimeout(function(){
@@ -75,7 +75,7 @@ module.exports.run = async(bot, message, args) => {
 
         } else if(emoji == "⭐") {
 
-            message.remove_reaction
+            remove.reactions
 
             msg.edit(embedhelpmod).then((msg) =>  {
                 setTimeout(function(){
@@ -85,7 +85,7 @@ module.exports.run = async(bot, message, args) => {
 
         } else if(emoji == "🎫") {
 
-            message.remove_reaction
+            remove.reactions
 
             msg.edit(embedhelpticket).then((msg) =>  {
                 setTimeout(function(){
@@ -95,7 +95,7 @@ module.exports.run = async(bot, message, args) => {
 
         } else if(emoji == "😁") {
 
-            message.remove_reaction
+            remove.reactions
 
             msg.edit(embedhelpfun).then((msg) =>  {
                 setTimeout(function(){
@@ -105,7 +105,7 @@ module.exports.run = async(bot, message, args) => {
 
         } else if(emoji == "❌") {
 
-            message.remove_reaction
+            remove.reactions
             
             message.delete();
 
