@@ -45,7 +45,7 @@ module.exports.run = async(bot, message, args) => {
             .setFooter("Help")
             .setTimestamp()
 
-        var botEmbed =  new discord.MessageEmbed()
+        var embedhelpticket =  new discord.MessageEmbed()
             .setTitle("help")
             .setColor("#03fc0f")
             .addFields(
