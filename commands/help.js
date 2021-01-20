@@ -17,9 +17,9 @@ module.exports.run = async(bot, message, args) => {
         .setTitle("Help")
         .setColor("#03fc0f")
         .addFields(
-            {name: "!userinfo", value: "`zie speler informatie`"},
-            {name: "!suggest", value: "`schrijf een suggestie`"},
-            {name: "!review", value: "`schrijf een review`"},
+            {name: "!userinfo", value: "zie speler informatie"},
+            {name: "!suggest", value: "schrijf een suggestie"},
+            {name: "!review", value: "schrijf een review"},
         )
         .setFooter(`${message.author.username}`)
         .setTimestamp()
@@ -28,7 +28,7 @@ module.exports.run = async(bot, message, args) => {
         .setTitle("help")
         .setColor("#03fc0f")
         .addFields(
-            {name:"sps", value: "`Speel steen papier schaar tegen de bot`"}
+            {name:"sps", value: "Speel steen papier schaar tegen de bot"}
         )
         .setFooter(`${message.author.username}`)
         .setTimestamp()
@@ -37,10 +37,10 @@ module.exports.run = async(bot, message, args) => {
             .setTitle("Help")
             .setColor("#03fc0f")
             .addFields(
-                {name:"embed", value: "`maak een embed in een bepaald kanaal`"},
-                {name: "kick", value: "`hiermee kan een staff lid iemand kicken`"},
-                {name: "ban", value: "`hiermee kan een staff lid iemand bannen`"},
-                {name: "clear", value: "`verwijder een aantal berichten`"}
+                {name:"embed", value: "maak een embed in een bepaald kanaal"},
+                {name: "kick", value: "hiermee kan een staff lid iemand kicken"},
+                {name: "ban", value: "hiermee kan een staff lid iemand bannen"},
+                {name: "clear", value: "verwijder een aantal berichten"}
             )
             .setFooter(`${message.author.username}`)
             .setTimestamp()
@@ -49,10 +49,10 @@ module.exports.run = async(bot, message, args) => {
             .setTitle("help")
             .setColor("#03fc0f")
             .addFields(
-                {name:"ticket", value: "`maak een ticket aan`"},
-                {name: "close", value: "`sluit een ticket dit kan alleen een stafflid`"},
-                {name: "add", value: "`voeg iemand toe aan een ticket`"},
-                {name: "remove", value: "`verwijder iemand uit een ticket`"}
+                {name:"ticket", value: "maak een ticket aan"},
+                {name: "close", value: "sluit een ticket dit kan alleen een stafflid"},
+                {name: "add", value: "voeg iemand toe aan een ticket"},
+                {name: "remove", value: "verwijder iemand uit een ticket"}
             )
             .setFooter(`${message.author.username}`)
             .setTimestamp()
