@@ -78,7 +78,7 @@ module.exports.run = async(bot, message, args) => {
             if(emoji == "❌") {
 
                 msg.delete();
-                
+
             }
 
         } else if(emoji == "⭐") {
@@ -91,6 +91,14 @@ module.exports.run = async(bot, message, args) => {
                 }, 1)
             })
 
+            var emoji = await promptMessage(msg, message.author, 30, ["❌"])
+
+            if(emoji == "❌") {
+
+                msg.delete();
+                
+            }
+
         } else if(emoji == "🎫") {
 
             msg.reactions.removeAll()
@@ -101,6 +109,14 @@ module.exports.run = async(bot, message, args) => {
                 }, 1)
             })
 
+            var emoji = await promptMessage(msg, message.author, 30, ["❌"])
+
+            if(emoji == "❌") {
+
+                msg.delete();
+                
+            }
+
         } else if(emoji == "😁") {
 
             msg.reactions.removeAll()
@@ -110,6 +126,14 @@ module.exports.run = async(bot, message, args) => {
                 msg.edit(embedhelpfun);
                 }, 1)
             })
+
+            var emoji = await promptMessage(msg, message.author, 30, ["❌"])
+
+            if(emoji == "❌") {
+
+                msg.delete();
+                
+            }
 
         } else if(emoji == "❌") {
 
