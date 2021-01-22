@@ -73,6 +73,14 @@ module.exports.run = async(bot, message, args) => {
                 }, 1)
             })
 
+            var emoji = await promptMessage(msg, message.author, 30, ["❌"])
+
+            if(emoji == "❌") {
+
+                msg.delete();
+                
+            }
+
         } else if(emoji == "⭐") {
 
             msg.reactions.removeAll()
