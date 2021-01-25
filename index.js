@@ -2,6 +2,7 @@ const discord = require("discord.js");
 const botConfig = require("./botconfig.json");
 
 const fs = require("fs");
+const { getPriority } = require("os");
 
 const client = new discord.Client();
 
@@ -48,7 +49,19 @@ client.on("message", async message => {
         return;
     }
 
-    var prefix = botConfig.prefix;
+    var prefixes = JSON.parse(fs.readFileSync("./prefixes.json"));
+
+    if(!prefixes[message.guild.id]) {
+
+        prefixes[message.guild.id] = {
+            prefix: botConfig.prefix
+        };
+
+    }
+
+    var prefix = prefixes[message.guild.id].prefix;
+
+    // var prefix = botConfig.prefix;
 
     var messageArray = message.content.split(" ");
 
